@@ -38,7 +38,7 @@ void Calculate(string RunnersNames[5], int MilesRun[5][7]) {
     }
 
     cout << "Total:" << setw(Width);
-    // dfjaskfjsa
+    // dfjaskfjsa sdlkjfhsadljkfh
     for (int i = 0; i < 5; ++i) {
         int totalMiles = 0;
 
