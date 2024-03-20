@@ -4,8 +4,17 @@
 #include <string>
 #include <sstream>
 
+/*
+* There are no direct inputs, just the runners.txt file. Basically the program reads the
+* file, it then prints the names from the file, then the Calculate() function will print the data.
+* The output is the names, the amount they ran each day, the total they ran, and the average per day.
+*/ 
+
 using namespace std;
 
+
+// Preconditions: The file has to exist
+// Post conditions, RunnersNames and MilesRun will be defined
 void Data(string RunnersNames[5], int MilesRun[5][7]) {
     ifstream file("runners.txt");
 
@@ -25,6 +34,9 @@ void Data(string RunnersNames[5], int MilesRun[5][7]) {
     }
 }
 
+
+// Preconditions: RunnersNames and MilesRun must be defined
+// Postconditions: The data will be output
 void Calculate(string RunnersNames[5], int MilesRun[5][7]) {
     
     const int Width = 15;
@@ -38,7 +50,6 @@ void Calculate(string RunnersNames[5], int MilesRun[5][7]) {
     }
 
     cout << "Total:" << setw(Width);
-    // dfjaskfjsa sdlkjfhsadljkfh adskfjhsadfh
     for (int i = 0; i < 5; ++i) {
         int totalMiles = 0;
 
@@ -60,6 +71,9 @@ void Calculate(string RunnersNames[5], int MilesRun[5][7]) {
     }
 }
 
+
+// Preconditions: RunnersNames and MilesRun must be definied
+// Postconditions: The names will be outputted
 int main() {
     string RunnersNames[5];
     int MilesRun[5][7];
